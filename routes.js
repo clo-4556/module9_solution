@@ -5,6 +5,9 @@
     RoutesConfig.$inject = ['$stateProvider', '$urlRouterProvider']; 
     function RoutesConfig($stateProvider, $urlRouterProvider) {
 
+        // Had to add this protection in here otherwise page would not load - ensures any unknown urls go to homepage
+        $urlRouterProvider.otherwise('/'); 
+        
         // Home state when users land on the home page
         $stateProvider.state('home', {
             url: '/', 
