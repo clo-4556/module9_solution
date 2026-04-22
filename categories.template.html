@@ -1,0 +1,7 @@
+<!--Simply loops through each category and displays it as a link users can click on-->
+<!-- used $ctrl for the controllerAs alias in AngularJS in order to access controller properies inside templates-->
+<ul>
+    <li ng-repeat="cat in $ctrl.categories">
+        <a ui-sref = "items ({ categoryShortName: cat.short_name })">{{ cat.name }}</a>
+    </li>
+</ul>
